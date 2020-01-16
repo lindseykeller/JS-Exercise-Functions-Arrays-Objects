@@ -225,15 +225,20 @@ function sortCarInventory(carsArr) {
 
 /**
  * ### Challenge `getModelYears`
- * 
+ * c
  * @instructions
  * We need the years from every car in the inventory!
  * getModelYears takes a single argument:
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
-function getModelYears(/* code here */) {
+function getModelYears(carInvArr) {
   /* code here */
+  let carYearsArr = [];
+  for(let i = 0; i < carInvArr.length; i++ ) {
+   carYearsArr.push(carInvArr[i].car_year);
+  }
+  return carYearsArr;
 }
 
 /**
