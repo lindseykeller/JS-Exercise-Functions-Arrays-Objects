@@ -93,7 +93,7 @@ function makeSmartPerson(name) {
     name: name,
     speak: function speak (name) {
       return "Hello my name is" + " " + name;
-    }
+    },
     sum: function add (num1, num2) {
       return num1 + num2;
     }
@@ -159,32 +159,14 @@ function get3rdCar(inventory) {
  * For example, if getCarInfoByIndex is invoked with the inventory and the number 0,
  * it will return `This is a Lincoln Navigator`.
 */
-var inventory = [
-  { id: 1, car_make: "Lincoln", car_model: "Navigator", car_year: 2009 },
-  { id: 2, car_make: "Mazda", car_model: "Miata MX-5", car_year: 2001 },
-  { id: 3, car_make: "Land Rover", car_model: "Defender Ice Edition", car_year: 2010 },
-  { id: 4, car_make: "Honda", car_model: "Accord", car_year: 1983 },
-  { id: 5, car_make: "Mitsubishi", car_model: "Galant", car_year: 1990 },
-  { id: 6, car_make: "Honda", car_model: "Accord", car_year: 1995 },
-  { id: 7, car_make: "Smart", car_model: "Fortwo", car_year: 2009 },
-  { id: 8, car_make: "Audi", car_model: "4000CS Quattro", car_year: 1987 },
-  { id: 9, car_make: "Ford", car_model: "Windstar", car_year: 1996 },
-  { id: 10, car_make: "Mercedes-Benz", car_model: "E-Class", car_year: 2000 },
-  { id: 11, car_make: "Infiniti", car_model: "G35", car_year: 2004 },
-  { id: 12, car_make: "Lotus", car_model: "Esprit", car_year: 2004 },
-  { id: 13, car_make: "Chevrolet", car_model: "Cavalier", car_year: 1997 },
-  { id: 14, car_make: "Dodge", car_model: "Ram Van 1500", car_year: 1999 }
-  /// ... Truncated
-]
+ //code here 
+
 
 function getCarInfoByIndex(inventoryArr, index) {
-  /* code here */
-  const carInfo = inventoryArr.find((item, index) => {
-    return index === 8 // we use 2 because index is zero-based.
-  })
+
+    const carInfo = inventoryArr[index]
   return `The car is a ${carInfo.car_make} ${carInfo.car_model}`
 }
-getCarInfoByIndex(inventory[8]);
 /**
  * ### Challenge `getLastCarInfo`
  * 
@@ -196,8 +178,11 @@ getCarInfoByIndex(inventory[8]);
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
 */
-function getLastCarInfo(/* code here */) {
+function getLastCarInfo(carsArr) {
+
   /* code here */
+  return `The car is a ${carsArr[carsArr.length -1].car_make} ${carsArr[carsArr.length -1].car_model}`; 
+
 }
 
 /**
@@ -212,8 +197,9 @@ function getLastCarInfo(/* code here */) {
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoById(/* code here */) {
+function getCarInfoById(carsArr, idNum) {
   /* code here */
+  return `The car is a ${carsArr.idNum.car_make} ${carsArr.idNum.car_model}`; 
 }
 
 /**
@@ -224,8 +210,9 @@ function getCarInfoById(/* code here */) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
 */
-function sortCarInventory(/* code here */) {
+function sortCarInventory(carsArr) {
   /* code here */
+  return carsArr.car_model.sort();
 }
 
 /**
