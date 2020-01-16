@@ -212,8 +212,16 @@ function getCarInfoById(carsArr, idNum) {
 */
 function sortCarInventory(carsArr) {
   /* code here */
-  return carsArr.car_model.sort();
-}
+  let carModels = [];
+
+  for (let i = 0; i < carsArr.length; i ++) {
+    carModels.push(carsArr[i]);
+  }
+  carModels.sort(    (a, b) =>
+  a.car_model > b.car_model ? 1 : b.car_model > a.car_model ? -1 : 0);
+
+    return carModels;
+  }
 
 /**
  * ### Challenge `getModelYears`
